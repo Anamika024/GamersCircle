@@ -7,10 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
+
+import com.godspeed.gameschhalaang.login.LoginActivity;
+import com.godspeed.gameschhalaang.login.LogoutActivity;
 import com.godspeed.gameskraftchhalaang.R;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,6 +22,8 @@ import com.google.android.play.core.review.ReviewInfo;
 import com.google.android.play.core.review.ReviewManager;
 import com.google.android.play.core.review.ReviewManagerFactory;
 import com.google.android.play.core.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class SettingsActivity extends AppCompatActivity {
@@ -29,6 +35,10 @@ public class SettingsActivity extends AppCompatActivity {
 
     private ImageView backBtn;
 
+    private Button logoutButton;
+    private FirebaseAuth mAuth;
+    private FirebaseUser user;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +48,11 @@ public class SettingsActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
         setContentView(R.layout.activity_settings);
-
+        logoutButton = findViewById(R.id.btn_logout);
+        mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
+        String retrieveLoggedInUserEmail;
+        retrieveLoggedInUserEmail = user.getEmail().toString();
 
          vibrationSwitch = (Switch)  findViewById(R.id.vibration_switch);
          soundSwitch = (Switch)  findViewById(R.id.sound_switch);
@@ -104,6 +118,19 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onBackPressed();
+            }
+        });
+
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // sign out from loggedIn account
+                mAuth.signOut();
+
+                // again it should navigate the user to the login screen
+                Intent intent = new Intent(SettingsActivity.this, LoginActivity.class);
+                startActivity(intent);
             }
         });
 

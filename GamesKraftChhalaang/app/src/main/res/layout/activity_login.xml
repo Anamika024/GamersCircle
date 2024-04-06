@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context="com.godspeed.gameschhalaang.login.LoginActivity"
     android:background="@drawable/appthemegredient">
 
     <LinearLayout
@@ -27,14 +27,13 @@
             android:textColor="@color/logoTextColor"
             android:textStyle="bold"
             android:layout_gravity="center"
-            android:layout_marginBottom="40dp"
-            />
+            android:layout_marginBottom="40dp" />
 
         <ImageView
             android:id="@+id/org_logo"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:src="@drawable/gameskraftlogo"
+            android:src="@drawable/game_circle_logo"
             android:layout_gravity="center"
             android:layout_marginBottom="70dp" />
 
