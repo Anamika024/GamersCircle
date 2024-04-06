@@ -1,7 +1,7 @@
 # GamersCircle
 A Unique gaming community!
 
-[![Click to watch the video](https://img.youtube.com/vi/HPEccl4_09s/0.jpg)](https://youtu.be/HPEccl4_09s)
+[![Click to watch the video](https://img.youtube.com/vi/9Sm0gyuPbRg/0.jpg)](https://youtu.be/9Sm0gyuPbRg)
 
 
 ## Description
@@ -32,4 +32,5 @@ In summary, the matchUsers() method calculates the distance between each user's 
 
 
 ## Demo
-APK Link: [https://drive.google.com/file/d/13VIyLR29ty2inSNSpHIDT_QaIb5yvjd6/view?usp=sharing](https://drive.google.com/file/d/13VIyLR29ty2inSNSpHIDT_QaIb5yvjd6/view?usp=sharing)
+APK Link: [https://drive.google.com/file/d/1cNVSuadi0UuTazzvmBHhSQEgtmjtpypC/view?usp=sharing](https://drive.google.com/file/d/1cNVSuadi0UuTazzvmBHhSQEgtmjtpypC/view?usp=sharing)
+
