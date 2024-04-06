@@ -1,4 +1,4 @@
-package com.godspeed.gameschhalaang;
+package com.godspeed.gameschhalaang.login;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.godspeed.gameschhalaang.dashboard.DashboardActivity;
+import com.godspeed.gameschhalaang.game.activities.ChooseSymbolActivity;
 import com.godspeed.gameskraftchhalaang.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -71,8 +73,13 @@ public class LoginActivity extends AppCompatActivity {
                                             "Login is successful", Toast.LENGTH_LONG).show();
 
                                     //after account is created it will navigate to logout page, it will show user's email
-                                    Intent intent = new Intent(LoginActivity.this, LogoutActivity.class);
+
+                                    //TODO add this to settings
+                                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                                     startActivity(intent);
+
+//                                    Intent intent = new Intent(LoginActivity.this, LogoutActivity.class);
+//                                    startActivity(intent);
 
                                 } else {
                                     // If sign in fails, display a message to the user.
@@ -103,8 +110,11 @@ public class LoginActivity extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null){
-            Intent intent = new Intent(LoginActivity.this, LogoutActivity.class);
+            //TODO add this to settings
+            Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
             startActivity(intent);
+//            Intent intent = new Intent(LoginActivity.this, LogoutActivity.class);
+//            startActivity(intent);
         }
     }
 }

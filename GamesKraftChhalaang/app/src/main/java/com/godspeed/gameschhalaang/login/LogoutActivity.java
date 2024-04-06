@@ -1,4 +1,4 @@
-package com.godspeed.gameschhalaang;
+package com.godspeed.gameschhalaang.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
