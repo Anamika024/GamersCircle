@@ -1,8 +1,6 @@
 # GamersCircle
 A Unique gaming community!
 
-[![Video Title](https://youtu.be/HPEccl4_09s)](https://youtu.be/HPEccl4_09s)
-
 [![Click to watch the video](https://img.youtube.com/vi/HPEccl4_09s/0.jpg)](https://youtu.be/HPEccl4_09s)
 
 
