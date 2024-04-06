@@ -1,9 +1,6 @@
 # GamersCircle
 A Unique gaming community!
 
-
-
-# GamersCircle
 ![Video link]()
 
 ## Description
