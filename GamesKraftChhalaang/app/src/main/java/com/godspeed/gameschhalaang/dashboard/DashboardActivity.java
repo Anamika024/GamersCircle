@@ -8,6 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.godspeed.gameschhalaang.community.CommunityActivity;
 import com.godspeed.gameschhalaang.game.activities.ChooseSymbolActivity;
 import com.godspeed.gameschhalaang.game.activities.SettingsActivity;
 import com.godspeed.gameskraftchhalaang.R;
@@ -30,6 +31,14 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DashboardActivity.this, ChooseSymbolActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        communitySection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this, CommunityActivity.class);
                 startActivity(intent);
             }
         });
